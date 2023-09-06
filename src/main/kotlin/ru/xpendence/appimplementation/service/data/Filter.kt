@@ -1,5 +1,7 @@
 package ru.xpendence.appimplementation.service.data
 
-class Filter {
+import java.math.BigDecimal
 
-}
+data class Filter(
+    val maxPrice: BigDecimal
+)

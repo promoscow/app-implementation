@@ -1,18 +1,18 @@
-package ru.xpendence.appimplementation.service
+package ru.xpendence.appimplementation.repository
 
 import ru.xpendence.appimplementation.entity.Good
 import ru.xpendence.appimplementation.service.data.Filter
 import java.util.*
 
-interface GoodService {
+interface GoodRepository {
 
-    fun create(good: Good): Good
+    fun save(good: Good): Good
 
     fun update(good: Good): Good
 
-    fun get(id: UUID): Good
+    fun find(id: UUID): Good?
 
-    fun getAll(filter: Filter): List<Good>
+    fun findAll(filter: Filter): List<Good>
 
     fun delete(id: UUID)
 }
